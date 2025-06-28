@@ -31,7 +31,10 @@ import com.jkuhail.newsapp.ui.theme.NewsAppTheme
 import kotlinx.coroutines.launch
 
 @Composable
-fun OnboardingScreen(modifier: Modifier = Modifier) {
+fun OnboardingScreen(
+    modifier: Modifier = Modifier,
+    event: (OnboardingEvent) -> Unit = {}
+) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -90,8 +93,8 @@ fun OnboardingScreen(modifier: Modifier = Modifier) {
                     text = buttonState.value[1],
                     onClick = {
                         scope.launch {
-                            if (pagerState.currentPage == 3) {
-                                //TODO: Navigate to home screen
+                            if (pagerState.currentPage == 2) {
+                                event(OnboardingEvent.SaveAppEntry)
                             } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
