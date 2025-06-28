@@ -22,7 +22,7 @@ class LocalUserManagerImpl @Inject constructor(
         }
     }
 
-    override fun readAppEntry(): Flow<Boolean> {
+    override suspend fun readAppEntry(): Flow<Boolean> {
         return dataStore.data
             .catch {
                 if (it is IOException) emit(emptyPreferences())
