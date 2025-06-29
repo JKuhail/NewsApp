@@ -6,9 +6,9 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import com.jkuhail.newsapp.data.manager.LocalUserManagerImpl
 import com.jkuhail.newsapp.domain.manager.LocalUserManager
-import com.jkuhail.newsapp.domain.usecases.AppEntryUseCases
-import com.jkuhail.newsapp.domain.usecases.ReadAppEntry
-import com.jkuhail.newsapp.domain.usecases.SaveAppEntry
+import com.jkuhail.newsapp.domain.usecases.app_entry.AppEntryUseCases
+import com.jkuhail.newsapp.domain.usecases.app_entry.ReadAppEntry
+import com.jkuhail.newsapp.domain.usecases.app_entry.SaveAppEntry
 import com.jkuhail.newsapp.util.Constants
 import dagger.Module
 import dagger.Provides
