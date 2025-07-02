@@ -1,4 +1,4 @@
-package com.jkuhail.newsapp.domain.usecases
+package com.jkuhail.newsapp.domain.usecases.app_entry
 
 /**
  * UseCase Holder (Optional)
