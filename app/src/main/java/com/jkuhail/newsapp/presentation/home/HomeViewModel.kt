@@ -9,7 +9,7 @@ import jakarta.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val newsUseCases: NewsUseCases
+    newsUseCases: NewsUseCases
 ) : ViewModel() {
 
     //we added cachedIn so the call will survive configuration changes

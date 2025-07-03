@@ -14,6 +14,7 @@ import com.jkuhail.newsapp.domain.usecases.app_entry.ReadAppEntry
 import com.jkuhail.newsapp.domain.usecases.app_entry.SaveAppEntry
 import com.jkuhail.newsapp.domain.usecases.news.GetNews
 import com.jkuhail.newsapp.domain.usecases.news.NewsUseCases
+import com.jkuhail.newsapp.domain.usecases.news.SearchNews
 import com.jkuhail.newsapp.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -73,6 +74,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideNewsUseCases(newsRepository: NewsRepository) = NewsUseCases(
-        getNews = GetNews(newsRepository = newsRepository)
+        getNews = GetNews(newsRepository = newsRepository),
+        searchNews = SearchNews(newsRepository = newsRepository)
     )
 }
